@@ -25,12 +25,15 @@ require_once("PluginDescription.php");
 /***REM_END***/
 
 abstract class PocketMinePlugin{
+    /** @var MainServer */
 	private $server;
 	private $isEnabled = false;
 	private $initialized = false;
+    /** @var PluginDescription */
 	private $description;
 	private $dataFolder;
 	private $config;
+    /** @var string */
 	private $configFile;
 	private $file;
 	
@@ -176,10 +179,11 @@ abstract class PocketMinePlugin{
 	public final function getServer(){
 		return $this->dataFolder;
 	}
-	
-	public function getName(){
-		return 
-	}
+
+    public final function getName()
+    {
+        return $this->description->getName();
+    }
 	
 	protected function getFile(){
 		return $this->file;
