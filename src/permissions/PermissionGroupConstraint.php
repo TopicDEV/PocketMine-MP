@@ -19,25 +19,7 @@
  *
  */
 
-interface PermissionInterface
+class PermissionGroupConstraint
 {
-    public function __construct();
-    public function __destruct();
 
-    /*
-     * First, permissions are set.
-     */
-    public function onSet();
-    public function onUnset();
-
-    /*
-     * And then, that permission is assigned to players.
-     */
-    public function onAssign();
-    public function onUnassign();
-
-    /*
-     * What to do when the permission is being validated.
-     */
-    public function onValidate();
 }

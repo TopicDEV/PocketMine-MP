@@ -2430,12 +2430,19 @@ class Player{
 	}
 	
 	public function isPermissionSet($nodeName){
-		
+
 	}
 	
 	public function hasPermission($nodeName){
 		return $this->isPermissionSet($nodeName) and PermissionsAPI::hasPermission($nodeName, $this);
 	}
+
+    public function validatePermission(PermissionGroupConstraint $Constraint)
+    {
+        /*
+         * Here, PermissionGroupConstraint can have constraints that multiple permission groups must be assigned even if they are not hierarchical.
+         */
+    }
 	
 	public function setPermission($nodeName, $boolean){
 		

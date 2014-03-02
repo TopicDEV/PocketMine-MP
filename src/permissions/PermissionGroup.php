@@ -19,12 +19,14 @@
  *
  */
 
-abstract class Permission implements PermissionInterface
+abstract class PermissionGroup implements PermissionGroupInterface
 {
-    private $identifier;
-
-    public function __construct()
+    public final function __construct()
     {
-        $this->identifier = PermissionsAPI::getIdentifier();
+        parent::__construct();
     }
+
+    /*
+     * Hierarchy is defined using PHP's extend.
+     */
 }
