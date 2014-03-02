@@ -36,5 +36,100 @@ class PluginDescription{
 	private $website;
 	private $order = PluginLoadOrder::POSTWORLD;
 	private $permisions = array();
-	
+
+    /**
+     * @return array
+     */
+    public function getAuthors()
+    {
+        return $this->authors;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCommands()
+    {
+        return $this->commands;
+    }
+
+    /**
+     * @return array
+     */
+    public function getDepend()
+    {
+        return $this->depend;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @return array
+     */
+    public function getLoadBefore()
+    {
+        return $this->loadBefore;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMain()
+    {
+        return $this->main;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
+
+    /**
+     * @return array
+     */
+    public function getPermisions()
+    {
+        return $this->permisions;
+    }
+
+    /**
+     * @return array
+     */
+    public function getSoftDepend()
+    {
+        return $this->softDepend;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getVersion()
+    {
+        return $this->version;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getWebsite()
+    {
+        return $this->website;
+    }
 }
